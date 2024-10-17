@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admission Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grid">
+    <header>
+      <img src="uni_logo-removebg-preview.png" alt="PUCIT" />
+    </header>
+    <main>
+      <hr>
+      <div class="Admissions"><h1>Admissions Fall 2023</h1></div>
+      <hr>
+      <br />
+      <div class="login box-body">
+        <fieldset>
+          <legend><h2>Existing User</h2></legend>
+          <label for="CNIC-SignIn"><b>CNIC/B-Form/NICOP:</b></label>
+          <br />
+          <input
+            type="text"
+            name="CNIC-SignIn"
+            placeholder="35200-0000000-0"
+            maxlength="20"
+            id="CNIC-SignIn"
+            autofocus
+          />
+          <br /><br />
+          <label for="password"><b>Password:</b></label>
+          <br />
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter Your Password"
+            id="password"
+          />
+          <br /><br />
+          <a href="Forgot Your Password">Forgot Your Password</a>
+          <br /><br />
+          <input type="button" value="SignIn" id="button" />
+          <input type="reset" name="reset" id="reset" />
+        </fieldset>
+      </div>
+      <br />
+      <div>
+        <fieldset>
+          <legend><h2>New Registration</h2></legend>
+          <div class="registeration box-body">
+            <form>
+              <fieldset>
+                <legend><h3>Personal Information</h3></legend>
+                <input
+                  type="radio"
+                  id="Pakistani"
+                  name="Country"
+                  value="Pakistani"
+                />
+                <label for="Pakistani">Pakistani</label><br />
+                <input
+                  type="radio"
+                  id="Foreign"
+                  name="Country"
+                  value="Foreign"
+                />
+                <label for="Foreign">Foreigner</label>
+                <br /><br />
+                <label for="Name"><b>Full Name:</b></label>
+                <br />
+                <input
+                  type="text"
+                  name="Name"
+                  placeholder="Enter Your Name"
+                />
+                <br /><br />
+                <label for="CNIC-SignIn"><b>CNIC/B-Form/NICOP:</b></label>
+                <br />
+                <input
+                  type="text"
+                  name="CNIC-SignIn"
+                  placeholder="35200-0000000-0"
+                  maxlength="20"
+                  id="CNIC-SignIn"
+                />
+                <br /><br />
+                <label for="Date-Of-Birth"><b>Date of Birth:</b></label>
+                <br />
+                <input
+                  type="date"
+                  name="Date-Of-Birth"
+                  id="Date-Of-Birth"
+                  placeholder="Date-Of-Birth"
+                  min="2000-12-31"
+                  max="2010-12-10"
+                />
+                <br /><br />
+              </fieldset>
+              <fieldset>
+                <legend><h3>Contact Information</h3></legend>
+                <label for="email"><b>Valid Email:</b></label>
+                <br />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="myname@example.com"
+                  required="@"
+                  id="email"
+                />
+                <br /><br />
+                <label for="number"><b>Phone Number:</b></label>
+                <br />
+                <input
+                  type="tel"
+                  name="number"
+                  placeholder="0300-0000000"
+                  pattern="[0-9]{4}-[0-9]{7}"
+                  maxlength="12"
+                  id="number"
+                /><br /><br />
+              </fieldset>
+              <fieldset>
+                <legend><h3>Educational Information</h3></legend>
+                <label for="qualification"><b>Qualification:</b></label>
+                <br />
+                <select name="qualification" id="qualification">
+                  <option value="qualification">Pre-Engineering</option>
+                  <option value="qualification">Pre-Medical</option>
+                  <option value="qualification" selected>Computer Science</option>
+                </select>
+                <br /><br />
+                <h3>Grade in Previous Class:</h3>
+                <input type="checkbox" id="grade" name="Pass" value="A" />
+                <label for="Pass"> A</label><br />
+                <input type="checkbox" id="grade" name="Pass" value="B" />
+                <label for="Pass">B</label><br />
+                <input type="checkbox" id="grade" name="Fail" value="F" />
+                <label for="Fail">F</label><br /><br />
+                <label for="picture"><b>Transcript of previous class:</b></label>
+                <br />
+                <input type="file" id="picture" name="picture" accept="image/jpeg,png" required><br />
+              </fieldset>
+              <br /><br />
+              <fieldset>
+                <legend><h3>Admission Information</h3></legend>
+                <label for="Degree"><b>Choose Degree:</b></label>
+                <br />
+                <input list="Degree" name="Degree">
+                <datalist id="Degree">
+                  <option value="BS-Information Technology">
+                  <option value="BS-Computer Science">
+                  <option value="BS-Software Engineering">
+                </datalist>
+                <br /><br />
+                <label for="reason"><b>Why PUCIT?</b></label>
+                <br />
+                <textarea name="reason" id="reason" cols="30" rows="5"></textarea>
+              </fieldset>
+              <br /><br />
+              <label for="password"><b>Password:</b></label>
+              <br />
+              <input
+                type="password"
+                name="password"
+                placeholder="Enter Your Password"
+                id="password"
+              />
+              <br /><br />
+              <label for="password"><b>Retype Password:</b></label>
+              <br />
+              <input
+                type="password"
+                name="password"
+                placeholder="Retype Your Password"
+                id="password"
+              />
+              <br /><br />
+              <input type="button" value="SignUp" id="button" onclick="alert('Congrats! You registered successfully') " />
+              <input type="reset" name="reset" id="reset">
+            </form>
+          </div>
+        </fieldset>
+      </div>
+    </main> 
+    <footer>
+      <hr>
+      <h4>Note:Last date to apply is 25th of August</h4>
+      <hr>
+    </footer> 
+  </div>
+</body>
+</html>
